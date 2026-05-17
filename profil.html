@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil - Roblox Indonesia</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#fff;
+}
+
+/* HEADER */
+.header{
+    position:fixed;
+    width:100%;
+    height:20px;
+    background:#e9e9e9;    
+}
+
+.header1{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;    
+    padding:1px 10px;
+    background:#e9e9e9;
+}
+
+.menu-btn{
+    font-size:25px;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+
+.right-icons{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.profile{
+    width:30px;
+    height:30px;
+    background: #aaaaaa;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.search{
+    font-size:20px;
+    background:#dcdcdc;
+    padding:2px 10px;
+    border-radius:5px;
+}
+
+/* NAV */
+.nav{  
+    display:flex;
+    justify-content:space-around;
+    background:#e9e9e9;
+    padding-bottom:1px;
+    font-size:15px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:black;
+    padding:5px 5px;
+}
+
+.active{
+    border-bottom:2px solid black;
+    font-weight:bold;
+}
+
+/* CONTENT */
+.content{  
+  position:fixed;
+    min-height:10px;
+}
+
+/* FOOTER */
+.footer-links{
+    display:flex;
+    justify-content:space-around;
+    padding:10px 10px;
+    font-size:15px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#333;
+}
+
+hr{
+    margin:0 5px;
+    border:0;
+    border-top:1px solid #ccc;
+}
+
+.copyright{
+    text-align:center;
+    padding:10px 0;
+    color:#555;
+}
+
+/* DROPDOWN MENU */
+.sidebar {
+    position:fixed;
+    height:100%;
+    width:0;
+    top:0;
+    left:0;
+    background:white;
+    overflow-x:hidden;
+    transition:0.3s;
+    box-shadow:2px 0 10px rgba(0,0,0,0.2);
+    padding-top:60px;
+}
+
+.sidebar a{
+    display:block;
+    padding:15px 25px;
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+}
+
+.sidebar a:hover{
+    background:#f1f1f1;
+}
+
+.close-btn1{
+    position:absolute;
+    justify-content:space-between;
+    width:250px;
+    top:10px;
+    right:20px
+    display:flex;
+    padding:5px ;
+    background:#aaaaaa;        
+}
+
+.close-btn{
+    position:absolute;
+    right:30px;
+    font-size:35px;
+    cursor:pointer;
+}
+</style>
+
+<style>
+.desain-avatar {    
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        #b8b8b8,
+        #c0c0c0,
+        #c8c8c8,
+        #d0d0d0,
+        #d8d8d8,
+        #f0f0f0,
+        #f8f8f8,
+        #ffffff
+    );
+    padding-bottom: 20px;
+}
+
+.desain-img {
+    margin: 0;
+    display: flex;
+    justify-content: center; /* tengah horizontal */
+}
+
+.img {
+    max-width: 300px; /* batas ukuran gambar */
+    width: 100%;
+    height: auto; /* proporsi tetap */
+    border-radius: 10px;
+}
+
+.desain-profil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-top: -50px;
+}
+
+.profile1 {    
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    background: #aaa;
+}
+
+.username h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.username a {
+    margin: 0;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+}
+
+.p-desain {
+    padding: 7px;
+    margin-top: 1px;
+
+.pengikut {  
+    display:flex;
+    justify-content:space-around;
+    padding:10px 10px;
+}
+
+.p-rbx{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px;
+    margin:12px 0;
+    text-decoration:none;
+    color:white;
+    border-radius:15px;
+    background:#335EFD;
+    transition:0.3s;
+    font-weight:bold;
+}
+.p-rbx img{
+    width:70px;
+}
+
+.p-ytb{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px;
+    margin:12px 0;
+    text-decoration:none;
+    color:white;
+    border-radius:15px;
+    background:#ff0000;
+    transition:0.3s;
+    font-weight:bold;
+}
+.p-ytb img{
+    width:20px;
+}
+
+.ri-v {
+    padding: 7px;
+    margin-top: 1px;
+}
+.ri-v button{
+    align-items:center;    
+    justify-content:center;    
+    gap:10px;
+    padding:14px;
+    margin:5px 0;
+    text-decoration:none;
+    border-radius:5px;
+    background: linear-gradient(
+        to bottom,
+        #ff0000,
+        #ff2222,
+        #ff4444,
+        #ff6666,
+        #ff8888,
+        #ffaaaa,
+        #ffcccc,
+        #ffeeee,
+        #ffffff
+    );
+    transition:0.3s;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+<div class="header1">
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+  
+    <img src="https://robloxindonesia.github.io/img/logo.png" width="100">
+
+    <div class="right-icons">
+        <!-- Foto profile -->
+        <a href="profil.html"><img src="https://RobloxIndonesia.github.io/img//30DAY-AvatarHeadshot-ED6E504DCD0989309333C3F87B84DC2E.png" class="profile" alt="Profile"></a>
+        <div class="search">⌕</div>
+     </div>
+</div>     
+     
+<!-- Nav -->
+<div class="nav">
+    <a href="home.html">Home</a>
+    <a href="games-tren.html">Game Tren</a>
+    <a href="berita.html">Berita</a>
+    <a href="sejarah.html">Sejarah</a>
+</div>
+</div>
+
+<!-- sidebar -->
+<div id="menuDropdown" class="sidebar">
+    <div class="close-btn1">
+    <img src="https://robloxindonesia.github.io/img/logo.png" width="100">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    </div>
+    <a href="#">keadaan koneksi server roblox</a>
+    <a href="#">kode² di game roblox</a>
+    <a href="#">tutorial di roblox</a>
+    <a href="#">karakter terkenal di roblox</a>
+    <a href="#">hubungi kami</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="desain-avatar">
+   <div class="desain-img">
+      <img id ="avatar" class="img" src="https://robloxindonesia.github.io/img/30DAY-Avatar-ED6E504DCD0989309333C3F87B84DC2E.png">
+   </div>
+
+   <div class="desain-profil">
+      <img id="profil" src="https://RobloxIndonesia.github.io/img/30DAY-AvatarHeadshot-ED6E504DCD0989309333C3F87B84DC2E.png" class="profile1">
+
+      <div class="username">
+         <h1>Roblox_Indonesia</h1>
+         <a>@RobloxIndonesia_old</a>
+      </div>
+   </div>
+</div>
+
+<div class="p-desain">
+<h4>pengikut/Subscriber</h4>
+<div class="pengikut">
+    <a href="https://www.roblox.com/id/users/10090200735/profile" class="p-rbx"><img src="https://robloxindonesia.github.io/img/logorbx.png" alt="">: 100</a>
+    <a href="https://www.youtube.com/@roblox_indonesia-com" class="p-ytb"><img src="https://robloxindonesia.github.io/img/logoytb.png" alt=""> YouTube : 10rb</a>
+</div>
+
+<h4>Tampilan Versi Avatar Roblox</h4>
+<div class="ri-v">
+<button onclick="RI0v18()">Roblox Indonesia v18</button>
+<button onclick="RI0v17()">Roblox Indonesia v17</button>
+<button onclick="RI0v16()">Roblox Indonesia v16</button>
+<button onclick="RI0v15()">Roblox Indonesia v15</button>
+<button onclick="RI0v14()">Roblox Indonesia v14</button>
+<button onclick="RI0v13()">Roblox Indonesia v13</button>
+<button onclick="RI0v12()">Roblox Indonesia v12</button>
+<button onclick="RI0v11()">Roblox Indonesia v11</button>
+<button onclick="RI0v10()">Roblox Indonesia v10</button>
+<button onclick="RI0v9()">Roblox Indonesia v9</button>
+<button onclick="RI0v8()">Roblox Indonesia v8</button>
+<button onclick="RI0v7()">Roblox Indonesia v7</button>
+<button onclick="RI0v6()">Roblox Indonesia v6</button>
+<button onclick="RI0v5()">Roblox Indonesia v5</button>
+<button onclick="RI0v4()">Roblox Indonesia v4</button>
+<button onclick="RI0v3()">Roblox Indonesia v3</button>
+<button onclick="RI0v2()">Roblox Indonesia v2</button>
+<button onclick="RI0v1()">Roblox Indonesia v1</button>
+</div>
+
+</div>
+
+
+<div class="content"></div>
+
+<div class="footer-links">
+    <a href="#">Tentang Kami</a>
+    <a href="#">Bantuan</a>
+    <a href="#">Privasi</a>
+    <a href="#">Situs Peta</a>
+</div>
+
+<hr>
+
+<div class="copyright">
+    ©2026 CTY Roblox Indonesia.
+</div>
+
+<script>
+function openMenu(){
+    document.getElementById("menuDropdown").style.width = "250px";
+}
+
+function closeMenu(){
+    document.getElementById("menuDropdown").style.width = "0";
+}
+</script>
+
+<script src="https://robloxindonesia.github.io/script/avatarlink.js"></script>
+
+</body>
+</html>
